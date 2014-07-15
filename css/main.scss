@@ -1,0 +1,152 @@
+---
+---
+
+@import 'normalize';
+@import 'mixins';
+
+$tisaFontStack: 'ff-tisa-sans-web-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$minionFontStack: 'minion-pro', Georgia, serif;
+$orange: #E25F58;
+$gray: #BFBABA;
+$black: #333030;
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $tisaFontStack;
+	font-size: 16px;
+	color: $black;
+	padding-bottom: 100px;
+}
+
+.wrapper {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/*=============================================
+=            Header Section Styles            =
+=============================================*/
+
+.site-header {
+	margin-top: 3.4375em;
+}
+
+.site-nav {
+	text-transform: uppercase;
+
+	a {
+		color: $orange;
+		text-decoration: none;
+		letter-spacing: 1px;
+	}
+}
+
+.header-line {
+	width: 1.5625em; //25px
+	border: 0;
+	height: 2px;
+	background-color: $orange;
+	margin: 3.125em auto 4.0625em;
+}
+
+/*================================================
+=            Homepage Specific Styles            =
+================================================*/
+
+.site-title {
+	font-family: $minionFontStack;
+	font-weight: normal;
+	font-size: 2.625em; // 42px
+	margin-bottom: 2.380952381em;
+}
+
+.company-cols {
+	@include clearfix;
+}
+
+.company-cols-title {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: normal;
+	color: $gray;
+	margin-bottom: 1.875em; //30px
+}
+
+.company-cols-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.company-cols-list-item {
+	display: inline-block;
+	padding-right: 40px;
+
+	&:last-child {
+		padding-right: 0;
+	}
+
+	img {
+		height: 34px;
+		width: auto;
+		filter: grayscale(1);
+		-webkit-filter: grayscale(1);
+		-moz-filter: grayscale(1);
+		-o-filter: grayscale(1);
+		-ms-filter: grayscale(1);
+
+		&:hover {
+			filter: grayscale(0);
+			-webkit-filter: grayscale(0);
+			-moz-filter: grayscale(0);
+			-o-filter: grayscale(0);
+			-ms-filter: grayscale(0);
+		}
+	}
+}
+
+.article-link {
+	color: $black;
+	text-decoration: none;
+	font-family: $minionFontStack;
+	font-size: 1.3125em; //21px
+
+	&:hover {
+		color: $orange;
+		border-bottom: 1px solid $orange;
+	}
+}
+
+.contact-box {
+    max-width: 14.0625em; //225px
+    margin: 0 auto;
+    margin-top: 6.13em; // 98px
+    padding: 0.9375em 1.5625em 1.3125em; // 15px 25px 21px
+
+    color: #fff;
+    border-radius: 5px;
+    background-color: #80c0c5;
+
+    p {
+    	margin-top: 0;
+    	margin-bottom: 20px;
+    }
+}
+
+.contact-button {
+	background-color: #4B878C;
+	padding: 5px 20px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+
+	&:hover {
+		color: #F3F3F3;
+	}
+}
